@@ -1,0 +1,16 @@
+[
+{
+  "modid": "hungerpersistence",
+  "name": "Hunger Persistence",
+  "description": "Persists hunger across deaths",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://github.com/squeek502/HungerPersistence",
+  "updateUrl": "",
+  "authorList": ["squeek"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
