@@ -15,7 +15,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.lang.reflect.Field;
 
-@Mod(modid = ModInfo.MODID, version = ModInfo.VERSION, name = "Hunger Persistence", guiFactory = ModInfo.GUI_FACTORY_CLASS)
+@Mod(modid = ModInfo.MODID, version = ModInfo.VERSION, name = "Hunger Persistence", acceptableRemoteVersions = "*", guiFactory = ModInfo.GUI_FACTORY_CLASS)
 public class HungerPersistence
 {
 	public static final Logger Log = LogManager.getLogger(ModInfo.MODID);
