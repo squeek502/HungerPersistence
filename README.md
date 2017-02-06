@@ -3,6 +3,8 @@ Hunger Persistence
 
 Minecraft mod that persists hunger across deaths.
 
+https://minecraft.curseforge.com/projects/hunger-persistence
+
 ###Building
 
 1. Clone this repository
