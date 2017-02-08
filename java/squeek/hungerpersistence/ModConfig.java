@@ -30,6 +30,13 @@ public class ModConfig
 		+ "Default Minecraft sets your hunger to 20 on respawn (full hunger).\n"
 		+ "Note: 1 hunger unit = 1/2 hunger bar, so, for example, a value of 4 here means respawning with 2 hunger bars.";
 
+	public static int MAXIMUM_HUNGER_ON_RESPAWN = ModConfig.MAXIMUM_HUNGER_ON_RESPAWN_DEFAULT;
+	private static final String MAXIMUM_HUNGER_ON_RESPAWN_NAME = "Maximum hunger on respawn";
+	private static final int MAXIMUM_HUNGER_ON_RESPAWN_DEFAULT = 20;
+	private static final String MAXIMUM_HUNGER_ON_RESPAWN_COMMENT = "If a player's hunger on death is higher than this value, then it will be set to this value on respawn.\n"
+		+ "Set this equal to " + MINIMUM_HUNGER_ON_RESPAWN_NAME + " to always have the player respawn with that exact hunger value.\n"
+		+ "Note: 1 hunger unit = 1/2 hunger bar, and 20 hunger units is 'full'.\n";
+
 	public static double MINIMUM_SATURATION_ON_RESPAWN = ModConfig.MINIMUM_SATURATION_ON_RESPAWN_DEFAULT;
 	private static final String MINIMUM_SATURATION_ON_RESPAWN_NAME = "Minimum saturation on respawn";
 	private static final double MINIMUM_SATURATION_ON_RESPAWN_DEFAULT = 0.0D;
@@ -66,6 +73,8 @@ public class ModConfig
 		config.getCategory(CATEGORY_MAIN).setComment(CATEGORY_MAIN_COMMENT);
 
 		MINIMUM_HUNGER_ON_RESPAWN = config.get(CATEGORY_MAIN, MINIMUM_HUNGER_ON_RESPAWN_NAME, MINIMUM_HUNGER_ON_RESPAWN_DEFAULT, MINIMUM_HUNGER_ON_RESPAWN_COMMENT).getInt(MINIMUM_HUNGER_ON_RESPAWN_DEFAULT);
+		MAXIMUM_HUNGER_ON_RESPAWN = config.get(CATEGORY_MAIN, MAXIMUM_HUNGER_ON_RESPAWN_NAME, MAXIMUM_HUNGER_ON_RESPAWN_DEFAULT, MAXIMUM_HUNGER_ON_RESPAWN_COMMENT).getInt(MAXIMUM_HUNGER_ON_RESPAWN_DEFAULT);
+
 		MINIMUM_SATURATION_ON_RESPAWN = config.get(CATEGORY_MAIN, MINIMUM_SATURATION_ON_RESPAWN_NAME, MINIMUM_SATURATION_ON_RESPAWN_DEFAULT, MINIMUM_SATURATION_ON_RESPAWN_COMMENT).getDouble(MINIMUM_SATURATION_ON_RESPAWN_DEFAULT);
 		MAXIMUM_SATURATION_ON_RESPAWN = config.get(CATEGORY_MAIN, MAXIMUM_SATURATION_ON_RESPAWN_NAME, MAXIMUM_SATURATION_ON_RESPAWN_DEFAULT, MAXIMUM_SATURATION_ON_RESPAWN_COMMENT).getDouble(MAXIMUM_SATURATION_ON_RESPAWN_DEFAULT);
 

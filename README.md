@@ -4,6 +4,7 @@ Hunger Persistence
 Minecraft mod that persists hunger across deaths.
 
 * Can set a minimum hunger value on respawn, so that players never respawn with less hunger than the specified amount
+* Can set a maximum hunger value on respawn, so that players never respawn with more hunger than the specified amount
 * Can set a minimum saturation value on respawn, so that players never respawn with less saturation than the specified amount
 * Can set a maximum saturation value on respawn, so that players never respawn with more saturation than the specified amount
 
