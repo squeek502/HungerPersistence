@@ -63,6 +63,8 @@ public class HungerPersistence
 		FoodStats foodStats = event.getEntityPlayer().getFoodStats();
 		if (foodStats.getFoodLevel() < ModConfig.MINIMUM_HUNGER_ON_RESPAWN)
 			foodStats.setFoodLevel(ModConfig.MINIMUM_HUNGER_ON_RESPAWN);
+		if (foodStats.getFoodLevel() > ModConfig.MAXIMUM_HUNGER_ON_RESPAWN)
+			foodStats.setFoodLevel(ModConfig.MAXIMUM_HUNGER_ON_RESPAWN);
 		if (foodStats.getSaturationLevel() < ModConfig.MINIMUM_SATURATION_ON_RESPAWN)
 			serverSetFoodSaturationLevel(foodStats, (float) ModConfig.MINIMUM_SATURATION_ON_RESPAWN);
 		if (foodStats.getSaturationLevel() > ModConfig.MAXIMUM_SATURATION_ON_RESPAWN)
